@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zain Haider</title>
+    <meta
+      name="description"
+      content="Zain Haider. Computer Science and Mathematics at UC San Diego. SWE, ML research, and AI agents."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="name" href="index.html">Zain Haider</a>
+      <nav aria-label="Primary">
+        <a href="resume.html">resume</a>
+        <a href="writing.html">writing</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="intro">
+        <span class="caps">Hi! I'm Zain.</span> <span class="caps">I'm</span> studying
+        <span class="caps">Computer Science</span> &amp;
+        <span class="caps">Mathematics</span> at the
+        <span class="caps">University of California, San Diego</span>. <span class="caps">I've</span> worked in
+        different areas of swe, including
+        <a href="resume.html#agile-testware">semantic search</a>,
+        <a href="resume.html#palantir">streaming telemetry</a>, and
+        <a href="resume.html#dod">diagnostic backends</a>.
+        <span class="caps">More</span> recently,
+        <a href="resume.html#hao-ai-lab"><span class="caps">AI</span> research</a>:
+        ml evals, video diffusion, and
+        <a href="resume.html#cohere-labs">vlm agents</a>.
+      </p>
+
+      <section class="agent-card" aria-labelledby="agent-card-caption">
+        <svg
+          id="agent-scene"
+          viewBox="0 0 480 300"
+          role="img"
+          aria-labelledby="agent-scene-title agent-scene-desc"
+        >
+          <title id="agent-scene-title">Typing at the computer</title>
+          <desc id="agent-scene-desc">
+            A person in glasses sits in a red desk chair, seen from the side, typing on a
+            keyboard in front of a monitor.
+          </desc>
+
+          <defs>
+            <style>
+              #agent-scene .ink {
+                stroke: #1c1a18;
+                stroke-width: 2.5;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+              }
+              #agent-scene .limb {
+                fill: none;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+              #agent-scene .limb-ink {
+                stroke: #1c1a18;
+              }
+            </style>
+            <path id="arm-far-path" d="M 308 136 L 290 168 L 232 155" />
+            <path id="arm-near-path" d="M 326 134 L 312 176 L 252 158" />
+            <path id="leg-far-path" d="M 344 198 L 270 200 L 262 252" />
+            <path id="leg-near-path" d="M 346 199 L 280 202 L 274 252" />
+          </defs>
+
+          <!-- 1. floor shadow -->
+          <ellipse cx="336" cy="268" rx="80" ry="7" fill="#2a2825" opacity="0.1" />
+          <ellipse cx="146" cy="266" rx="56" ry="5" fill="#2a2825" opacity="0.08" />
+
+          <!-- 2. chair -->
+          <g id="chair">
+            <path
+              class="limb limb-ink"
+              stroke-width="5"
+              d="M 342 246 L 310 262 M 342 246 L 374 262 M 342 246 L 342 264"
+            />
+            <circle cx="310" cy="264" r="4" fill="#1c1a18" />
+            <circle cx="374" cy="264" r="4" fill="#1c1a18" />
+            <circle cx="342" cy="266" r="4" fill="#1c1a18" />
+            <path class="limb limb-ink" stroke-width="7" d="M 342 220 L 342 246" />
+            <path class="limb limb-ink" stroke-width="5" d="M 364 216 Q 388 216 386 186" />
+            <rect
+              class="ink"
+              x="376"
+              y="132"
+              width="16"
+              height="58"
+              rx="8"
+              fill="#d94a38"
+              transform="rotate(6 384 161)"
+            />
+            <rect class="ink" x="304" y="207" width="78" height="15" rx="7.5" fill="#d94a38" />
+          </g>
+
+          <!-- 3. far leg -->
+          <use href="#leg-far-path" class="limb limb-ink" stroke-width="27" />
+          <use href="#leg-far-path" class="limb" stroke="#a3b3bd" stroke-width="22" />
+          <path
+            class="ink"
+            fill="#2a2825"
+            d="M 252 249 L 273 249 L 273 263 L 238 263 Q 237 254 252 249 Z"
+          />
+
+          <!-- 4. desk -->
+          <g id="desk">
+            <rect class="ink" x="106" y="180" width="74" height="84" fill="#d39f3a" />
+            <path class="limb limb-ink" stroke-width="2" d="M 106 208 L 180 208" />
+            <circle cx="143" cy="195" r="2.5" fill="#1c1a18" />
+            <rect class="ink" x="92" y="170" width="172" height="12" rx="3" fill="#e8b84f" />
+          </g>
+
+          <!-- 5. monitor -->
+          <g id="monitor">
+            <path class="ink" fill="#cfccc5" d="M 141 148 L 159 148 L 157 165 L 143 165 Z" />
+            <ellipse class="ink" cx="150" cy="166" rx="24" ry="4.5" fill="#dcd9d2" />
+            <path class="ink" fill="#c3cad2" d="M 98 67 L 110 60 L 110 156 L 98 149 Z" />
+            <path class="ink" fill="#eeece6" d="M 110 60 L 186 75 L 186 147 L 110 156 Z" />
+            <path
+              class="ink"
+              stroke-width="2"
+              fill="#dbe8f5"
+              d="M 118 72 L 178 84 L 178 138 L 118 144 Z"
+            />
+            <g
+              id="code"
+              stroke="#4f86c6"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              fill="none"
+            >
+              <line id="code-1" x1="125" y1="87.4" x2="158" y2="92" />
+              <line id="code-2" x1="125" y1="101.4" x2="170" y2="105" />
+              <line id="code-3" x1="133" y1="115.5" x2="163" y2="116.1" />
+              <line id="code-4" x1="133" y1="129" x2="152" y2="128.2" />
+            </g>
+            <rect id="ide-cursor" x="156" y="124" width="3" height="8" rx="1" fill="#2f5f9a" />
+          </g>
+
+          <!-- 6. keyboard -->
+          <g id="keyboard">
+            <path class="ink" fill="#eceae4" d="M 190 156 L 250 156 L 260 170 L 180 170 Z" />
+            <path
+              fill="none"
+              stroke="#1c1a18"
+              stroke-width="1"
+              stroke-linecap="round"
+              opacity="0.45"
+              d="M 186.6 160.7 L 253.4 160.7 M 183.4 165.3 L 256.6 165.3 M 197.5 156 L 190 170 M 205 156 L 200 170 M 212.5 156 L 210 170 M 220 156 L 220 170 M 227.5 156 L 230 170 M 235 156 L 240 170 M 242.5 156 L 250 170"
+            />
+          </g>
+
+          <!-- 7. far arm -->
+          <g id="arm-far">
+            <use href="#arm-far-path" class="limb limb-ink" stroke-width="17" />
+            <g id="hand-far">
+              <g id="ff-1">
+                <line class="limb limb-ink" stroke-width="7.6" x1="216" y1="154" x2="212" y2="160" />
+                <line class="limb" stroke="#e3a97c" stroke-width="4.2" x1="216" y1="154" x2="212" y2="160" />
+              </g>
+              <g id="ff-2">
+                <line class="limb limb-ink" stroke-width="7.6" x1="222" y1="156" x2="218" y2="162" />
+                <line class="limb" stroke="#e3a97c" stroke-width="4.2" x1="222" y1="156" x2="218" y2="162" />
+              </g>
+              <g id="ff-3">
+                <line class="limb limb-ink" stroke-width="7.6" x1="228" y1="157" x2="225" y2="163" />
+                <line class="limb" stroke="#e3a97c" stroke-width="4.2" x1="228" y1="157" x2="225" y2="163" />
+              </g>
+              <ellipse
+                class="ink"
+                cx="224"
+                cy="153"
+                rx="9"
+                ry="6"
+                fill="#e3a97c"
+                transform="rotate(-10 224 153)"
+              />
+            </g>
+            <use href="#arm-far-path" class="limb" stroke="#e3a97c" stroke-width="12" />
+            <path
+              class="ink"
+              fill="#e0cf88"
+              d="M 298 132 Q 308 120 319 138 L 309 158 L 289 150 Z"
+            />
+          </g>
+
+          <!-- 8. neck + torso -->
+          <path class="limb limb-ink" stroke-width="22" d="M 304 100 L 314 120" />
+          <path class="limb" stroke="#f0b98d" stroke-width="17" d="M 304 100 L 314 120" />
+          <path
+            class="ink"
+            fill="#f2e3a0"
+            d="M 304 120 Q 322 108 344 120 Q 362 136 362 170 L 360 200 L 318 202 Q 306 170 300 140 Q 298 126 304 120 Z"
+          />
+
+          <!-- 9. near leg -->
+          <use href="#leg-near-path" class="limb limb-ink" stroke-width="29" />
+          <use href="#leg-near-path" class="limb" stroke="#b9c7d0" stroke-width="24" />
+          <path
+            class="ink"
+            fill="#2a2825"
+            d="M 263 249 L 286 249 L 286 264 L 248 264 Q 247 255 263 249 Z"
+          />
+
+          <!-- 10. head -->
+          <g id="head">
+            <g transform="translate(310 106) scale(1.12) translate(-310 -106)">
+            <path
+              class="ink"
+              fill="#f0b98d"
+              d="M 312 104 C 326 98 332 82 330 68 C 327 48 306 40 290 44 C 278 47 271 58 271 68 L 270 76 L 261 86 Q 261 90 268 90 L 269 96 Q 270 106 282 108 Q 298 110 312 104 Z"
+            />
+            <path
+              class="ink"
+              fill="#4a2f24"
+              d="M 274 60 Q 274 50 280 46 L 278 36 L 288 42 L 292 30 L 300 39 L 310 29 L 314 40 L 326 34 L 325 46 L 337 46 L 331 56 Q 336 72 330 88 L 322 94 Q 322 80 318 72 Q 308 70 304 60 Q 292 62 284 54 Q 280 58 274 60 Z"
+            />
+            <ellipse class="ink" stroke-width="2" cx="313" cy="80" rx="4.5" ry="6.5" fill="#f0b98d" />
+            <path class="limb limb-ink" stroke-width="2.2" d="M 272 63 L 283 61" />
+            <ellipse id="eye" cx="279" cy="75" rx="1.8" ry="1.8" fill="#1c1a18" />
+            <rect
+              x="271"
+              y="68"
+              width="17"
+              height="13"
+              rx="4"
+              fill="#ffffff"
+              fill-opacity="0.35"
+              stroke="#1c1a18"
+              stroke-width="2.2"
+            />
+            <path class="limb limb-ink" stroke-width="2.2" d="M 288 73 L 310 76" />
+            <path class="limb limb-ink" stroke-width="1.8" d="M 271 99 Q 275 102 280 99" />
+            </g>
+          </g>
+
+          <!-- 11. near arm -->
+          <g id="arm-near">
+            <use href="#arm-near-path" class="limb limb-ink" stroke-width="18" />
+            <g id="hand-near">
+              <g id="nf-1">
+                <line class="limb limb-ink" stroke-width="8" x1="234" y1="156" x2="229" y2="163" />
+                <line class="limb" stroke="#f0b98d" stroke-width="4.5" x1="234" y1="156" x2="229" y2="163" />
+              </g>
+              <g id="nf-2">
+                <line class="limb limb-ink" stroke-width="8" x1="240" y1="158" x2="235" y2="165" />
+                <line class="limb" stroke="#f0b98d" stroke-width="4.5" x1="240" y1="158" x2="235" y2="165" />
+              </g>
+              <g id="nf-3">
+                <line class="limb limb-ink" stroke-width="8" x1="246" y1="159" x2="242" y2="166" />
+                <line class="limb" stroke="#f0b98d" stroke-width="4.5" x1="246" y1="159" x2="242" y2="166" />
+              </g>
+              <ellipse
+                class="ink"
+                cx="243"
+                cy="155"
+                rx="10"
+                ry="6.5"
+                fill="#f0b98d"
+                transform="rotate(-10 243 155)"
+              />
+            </g>
+            <use href="#arm-near-path" class="limb" stroke="#f0b98d" stroke-width="13" />
+            <path
+              class="ink"
+              fill="#f2e3a0"
+              d="M 316 130 Q 326 116 338 136 L 329 161 L 307 153 Z"
+            />
+          </g>
+
+          <!-- 12. typing squiggles -->
+          <g
+            id="motion-lines"
+            fill="none"
+            stroke="#9ccf86"
+            stroke-width="3"
+            stroke-linecap="round"
+          >
+            <path id="motion-1" d="M 221 142 Q 232 136 243 141" opacity="0" />
+            <path id="motion-2" d="M 217 134 Q 232 125 247 133" opacity="0" />
+            <path id="motion-3" d="M 213 126 Q 232 114 251 125" opacity="0" />
+          </g>
+        </svg>
+
+        <p class="agent-card__caption" id="agent-card-caption">
+          typing.
+        </p>
+        <div class="agent-card__controls">
+          <button type="button" id="pause-btn" aria-label="Pause animation">
+            pause
+          </button>
+          <button type="button" id="replay-btn" aria-label="Replay animation">
+            replay
+          </button>
+        </div>
+      </section>
+
+      <p class="outro">
+        <span class="caps">Lately</span> i've been interested in <span class="caps">AI</span> inference
+        infrastructure, particularly the challenges of serving
+        <span class="caps">LLMs</span> efficiently at scale. <span class="caps">I'm</span> curious about how
+        systems manage
+        <span class="caps">GPU</span> workloads, handle concurrent requests, and
+        reduce latency without sacrificing throughput. <span class="caps">I</span> want to explore
+        technologies like <span class="caps">vLLM</span>, continuous batching, and
+        <span class="caps">KV</span> caching.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <a class="caps" href="https://github.com/zainnh" rel="noopener noreferrer">GitHub</a>
+      <span aria-hidden="true">·</span>
+      <a
+        class="caps"
+        href="https://www.linkedin.com/in/zain-haiderr/"
+        rel="noopener noreferrer"
+        >LinkedIn</a
+      >
+      <span aria-hidden="true">·</span>
+      <a href="mailto:zainnh9@gmail.com">zainnh9@gmail.com</a>
+    </footer>
+
+    <script src="agent-animation.js" defer></script>
+  </body>
+</html>

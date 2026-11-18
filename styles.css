@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #f6f3ea;
+  --text: #1e1c1a;
+  --text-muted: #6b645c;
+  --link: #6b2233;
+  --link-underline: rgba(107, 34, 51, 0.38);
+  --card-bg: #fffdf8;
+  --card-grid: #e5dfd4;
+  --card-ink: #1e1c1a;
+  --card-muted: #756e66;
+  --card-accent: #5a7249;
+  --card-warn: #a84d3c;
+  --max-width: 34rem;
+  --card-radius: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 19px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Spectral, "Iowan Old Style", Charter, Georgia, serif;
+  font-weight: 400;
+  line-height: 1.62;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-color: var(--link);
+}
+
+.caps {
+  text-transform: none;
+}
+
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a.name {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-header nav a {
+  margin-left: 0.75rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.site-header nav a[aria-current="page"] {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.2em;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.intro {
+  margin: 0 0 1.75rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.intro strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.agent-card {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem 1.5rem 3.25rem;
+  margin: 0 0 1.75rem;
+  overflow: hidden;
+}
+
+.agent-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--card-ink);
+}
+
+.agent-card__caption {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--card-muted);
+  text-transform: lowercase;
+}
+
+.agent-card__caption::before {
+  content: "• ";
+  color: var(--card-accent);
+}
+
+.agent-card__controls {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.85rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.agent-card__controls button {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--card-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.35rem;
+  text-transform: capitalize;
+}
+
+.agent-card__controls button:hover {
+  color: var(--card-ink);
+}
+
+.outro {
+  margin: 0 0 2.5rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #111;
+  text-transform: lowercase;
+}
+
+.site-footer a {
+  color: #111;
+  text-decoration-color: rgba(17, 17, 17, 0.45);
+}
+
+.site-footer a:hover {
+  color: #111;
+  text-decoration-color: #111;
+}
+
+/* Resume page */
+.resume-page h1 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: #111;
+}
+
+.resume-page .subtitle {
+  margin: 0 0 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: lowercase;
+}
+
+.role:last-child {
+  margin-bottom: 0;
+}
+
+.role-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.role h2 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  color: #111;
+}
+
+.role .dates {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.role-line {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.role {
+  margin-bottom: 1.75rem;
+}
+
+.role[id] {
+  scroll-margin-top: 2rem;
+}
+
+.page-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Writing page */
+.writing-page h1 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: #111;
+}
+
+.writing-page .subtitle {
+  margin: 0 0 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: lowercase;
+  max-width: 32rem;
+}
+
+.writing-page .writing-single {
+  margin-bottom: 1rem;
+}
+
+.writing-section {
+  margin-bottom: 2.25rem;
+}
+
+.writing-section:last-child {
+  margin-bottom: 0;
+}
+
+.writing-section h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  text-transform: lowercase;
+}
+
+.writing-blurb {
+  margin: 0 0 0.65rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: lowercase;
+  max-width: 32rem;
+}
+
+.coming-soon {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-card svg *[data-animated] {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 17px;
+  }
+
+  .agent-card {
+    padding: 1rem 1rem 3rem;
+  }
+}
